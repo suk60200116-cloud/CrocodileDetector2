@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0A0A0F">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="56dp" android:orientation="horizontal" android:gravity="center_vertical" android:paddingStart="4dp" android:paddingEnd="20dp" android:paddingTop="4dp" android:background="#0D0D14">
+        <ImageButton android:id="@+id/btnBack" android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_arrow_left" android:background="?attr/selectableItemBackgroundBorderless" android:contentDescription="뒤로가기"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="URL 검사" android:textColor="#FFFFFF" android:textSize="17sp" android:fontFamily="sans-serif-medium"/>
+    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#1F1F2E"/>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+
+            <!-- Hero -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center" android:background="#1A1400" android:padding="32dp">
+                <FrameLayout android:layout_width="80dp" android:layout_height="80dp" android:background="@drawable/bg_url_icon" android:layout_marginBottom="20dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:text="🔗" android:textSize="36sp"/>
+                </FrameLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="URL CHECKER" android:textColor="#FAC775" android:textSize="11sp" android:letterSpacing="0.15" android:fontFamily="sans-serif-medium" android:layout_marginBottom="10dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="의심스러운 링크,\n바로 검사하세요" android:textColor="#FFFFFF" android:textSize="22sp" android:fontFamily="sans-serif-medium" android:gravity="center" android:lineSpacingMultiplier="1.3" android:layout_marginBottom="10dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="통화 후 문자로 오는 악성 링크를 클릭 전에\n미리 검사해 스미싱 피해를 막을 수 있습니다." android:textColor="#888899" android:textSize="13sp" android:gravity="center" android:lineSpacingMultiplier="1.6"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+
+                <!-- 스미싱이란? -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="스미싱이란?" android:textColor="#555566" android:textSize="10sp" android:letterSpacing="0.2" android:layout_marginBottom="10dp" android:layout_marginStart="4dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/bg_detail_card" android:padding="18dp" android:layout_marginBottom="10dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="10dp">
+                        <FrameLayout android:layout_width="36dp" android:layout_height="36dp" android:background="@drawable/bg_url_icon" android:layout_marginEnd="12dp"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:text="💬" android:textSize="16sp"/></FrameLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SMS + Phishing = Smishing" android:textColor="#E0E0F0" android:textSize="14sp" android:fontFamily="sans-serif-medium"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="보이스피싱 범죄자들은 통화 후 문자로 악성 링크를 보내 개인정보나 금융정보를 탈취합니다. 공식 도메인처럼 보이지만 실제론 가짜 사이트로 연결되는 경우가 대부분입니다." android:textColor="#777788" android:textSize="12sp" android:lineSpacingMultiplier="1.7"/>
+                </LinearLayout>
+
+                <!-- 위험 URL 유형 -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="이런 URL은 위험해요" android:textColor="#555566" android:textSize="10sp" android:letterSpacing="0.2" android:layout_marginBottom="10dp" android:layout_marginStart="4dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/bg_detail_card" android:padding="18dp" android:layout_marginBottom="10dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                        <View android:layout_width="5dp" android:layout_height="5dp" android:background="@drawable/dot_red" android:layout_marginEnd="10dp" android:layout_marginTop="5dp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=".xyz .top .tk 등 이상한 도메인" android:textColor="#E0E0F0" android:textSize="13sp" android:fontFamily="sans-serif-medium" android:layout_marginBottom="2dp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="공식 기관은 .go.kr .co.kr을 사용합니다" android:textColor="#777788" android:textSize="11sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                        <View android:layout_width="5dp" android:layout_height="5dp" android:background="@drawable/dot_red" android:layout_marginEnd="10dp" android:layout_marginTop="5dp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="bit.ly, tinyurl 등 축약 URL" android:textColor="#E0E0F0" android:textSize="13sp" android:fontFamily="sans-serif-medium" android:layout_marginBottom="2dp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="실제 연결 주소를 숨기기 위해 사용합니다" android:textColor="#777788" android:textSize="11sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                        <View android:layout_width="5dp" android:layout_height="5dp" android:background="@drawable/dot_red" android:layout_marginEnd="10dp" android:layout_marginTop="5dp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="택배·금융기관 사칭 URL" android:textColor="#E0E0F0" android:textSize="13sp" android:fontFamily="sans-serif-medium" android:layout_marginBottom="2dp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="cjlogis-confirm.xyz, kb-secure-check.top 등" android:textColor="#777788" android:textSize="11sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <View android:layout_width="5dp" android:layout_height="5dp" android:background="@drawable/dot_red" android:layout_marginEnd="10dp" android:layout_marginTop="5dp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="APK 파일 다운로드 유도 링크" android:textColor="#E0E0F0" android:textSize="13sp" android:fontFamily="sans-serif-medium" android:layout_marginBottom="2dp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="출처 불명 앱 설치는 악성 앱 감염의 주요 경로" android:textColor="#777788" android:textSize="11sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 사용 방법 -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="사용 방법" android:textColor="#555566" android:textSize="10sp" android:letterSpacing="0.2" android:layout_marginBottom="10dp" android:layout_marginStart="4dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/bg_detail_card" android:padding="18dp" android:layout_marginBottom="10dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="14dp">
+                        <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="1" android:textColor="#FAC775" android:textSize="12sp" android:fontFamily="sans-serif-medium" android:gravity="center" android:background="@drawable/bg_url_icon" android:layout_marginEnd="12dp" android:layout_marginTop="1dp"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="하단 탭에서 URL 검사 탭(🔍)을 선택하세요" android:textColor="#C0C0D8" android:textSize="13sp" android:lineSpacingMultiplier="1.4"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="14dp">
+                        <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="2" android:textColor="#FAC775" android:textSize="12sp" android:fontFamily="sans-serif-medium" android:gravity="center" android:background="@drawable/bg_url_icon" android:layout_marginEnd="12dp" android:layout_marginTop="1dp"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="문자로 받은 의심 URL을 입력창에 붙여넣으세요" android:textColor="#C0C0D8" android:textSize="13sp" android:lineSpacingMultiplier="1.4"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="3" android:textColor="#FAC775" android:textSize="12sp" android:fontFamily="sans-serif-medium" android:gravity="center" android:background="@drawable/bg_url_icon" android:layout_marginEnd="12dp" android:layout_marginTop="1dp"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="검사 결과로 위험도와 피싱 패턴을 즉시 확인하세요" android:textColor="#C0C0D8" android:textSize="13sp" android:lineSpacingMultiplier="1.4"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 스펙 -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="서비스 정보" android:textColor="#555566" android:textSize="10sp" android:letterSpacing="0.2" android:layout_marginBottom="10dp" android:layout_marginStart="4dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:background="@drawable/bg_spec_item" android:padding="14dp" android:layout_marginEnd="6dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="FastAPI" android:textColor="#FAC775" android:textSize="16sp" android:fontFamily="sans-serif-medium"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="백엔드 서버" android:textColor="#555566" android:textSize="10sp" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:background="@drawable/bg_spec_item" android:padding="14dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Render" android:textColor="#FAC775" android:textSize="16sp" android:fontFamily="sans-serif-medium"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="클라우드 배포" android:textColor="#555566" android:textSize="10sp" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="40dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:background="@drawable/bg_spec_item" android:padding="14dp" android:layout_marginEnd="6dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="즉시" android:textColor="#4ADE80" android:textSize="16sp" android:fontFamily="sans-serif-medium"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="검사 결과 제공" android:textColor="#555566" android:textSize="10sp" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:background="@drawable/bg_spec_item" android:padding="14dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="무료" android:textColor="#4ADE80" android:textSize="16sp" android:fontFamily="sans-serif-medium"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="추가 비용 없음" android:textColor="#555566" android:textSize="10sp" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

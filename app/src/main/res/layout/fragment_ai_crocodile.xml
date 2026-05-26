@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0A0A0F">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="56dp" android:orientation="horizontal" android:gravity="center_vertical" android:paddingStart="4dp" android:paddingEnd="20dp" android:paddingTop="4dp" android:background="#0D0D14">
+        <ImageButton android:id="@+id/btnBack" android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_arrow_left" android:background="?attr/selectableItemBackgroundBorderless" android:contentDescription="뒤로가기"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="AI 크로커다일" android:textColor="#FFFFFF" android:textSize="17sp" android:fontFamily="sans-serif-medium"/>
+    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#1F1F2E"/>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+
+            <!-- Hero -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center" android:background="#0A1A14" android:padding="32dp">
+                <FrameLayout android:layout_width="80dp" android:layout_height="80dp" android:background="@drawable/bg_aicroc_icon" android:layout_marginBottom="20dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:text="🤖" android:textSize="36sp"/>
+                </FrameLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AI CROCODILE" android:textColor="#00C896" android:textSize="11sp" android:letterSpacing="0.15" android:fontFamily="sans-serif-medium" android:layout_marginBottom="10dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AI가 대응 스크립트를\n귀에 속삭여줍니다" android:textColor="#FFFFFF" android:textSize="22sp" android:fontFamily="sans-serif-medium" android:gravity="center" android:lineSpacingMultiplier="1.3" android:layout_marginBottom="10dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="범죄자의 발화를 분석해 어떻게 대응해야 할지\nAI가 실시간으로 조언해줍니다. 상대방은 들을 수 없습니다." android:textColor="#888899" android:textSize="13sp" android:gravity="center" android:lineSpacingMultiplier="1.6"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+
+                <!-- 작동 흐름 -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="작동 흐름" android:textColor="#555566" android:textSize="10sp" android:letterSpacing="0.2" android:layout_marginBottom="10dp" android:layout_marginStart="4dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/bg_flow_container" android:padding="16dp" android:layout_marginBottom="10dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="12dp">
+                        <FrameLayout android:layout_width="32dp" android:layout_height="32dp" android:background="@drawable/bg_ondevice_icon"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:text="🎙️" android:textSize="14sp"/></FrameLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" → " android:textColor="#333344" android:textSize="14sp"/>
+                        <FrameLayout android:layout_width="32dp" android:layout_height="32dp" android:background="@drawable/bg_aicroc_icon"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:text="📝" android:textSize="14sp"/></FrameLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" → " android:textColor="#333344" android:textSize="14sp"/>
+                        <FrameLayout android:layout_width="32dp" android:layout_height="32dp" android:background="@drawable/bg_url_icon"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:text="☁️" android:textSize="14sp"/></FrameLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" → " android:textColor="#333344" android:textSize="14sp"/>
+                        <FrameLayout android:layout_width="32dp" android:layout_height="32dp" android:background="@drawable/bg_aicroc_icon"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:text="🤖" android:textSize="14sp"/></FrameLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" → " android:textColor="#333344" android:textSize="14sp"/>
+                        <FrameLayout android:layout_width="32dp" android:layout_height="32dp" android:background="@drawable/bg_ondevice_icon"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:text="🔊" android:textSize="14sp"/></FrameLayout>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="상대방\n발화" android:textColor="#555566" android:textSize="9sp" android:gravity="center"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="  " android:textSize="9sp"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="STT\n변환" android:textColor="#555566" android:textSize="9sp" android:gravity="center"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="  " android:textSize="9sp"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="서버\n전송" android:textColor="#555566" android:textSize="9sp" android:gravity="center"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="  " android:textSize="9sp"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="AI\n분석" android:textColor="#555566" android:textSize="9sp" android:gravity="center"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="  " android:textSize="9sp"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="TTS\n속삭임" android:textColor="#00C896" android:textSize="9sp" android:gravity="center"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 핵심 기능 카드들 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/bg_detail_card" android:padding="18dp" android:layout_marginBottom="10dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="10dp">
+                        <FrameLayout android:layout_width="36dp" android:layout_height="36dp" android:background="@drawable/bg_aicroc_icon" android:layout_marginEnd="12dp"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:text="🔊" android:textSize="16sp"/></FrameLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="속삭임 TTS — 나만 들을 수 있어요" android:textColor="#E0E0F0" android:textSize="14sp" android:fontFamily="sans-serif-medium"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="AI 스크립트는 볼륨 0.3 수준의 매우 낮은 소리로 재생됩니다. 통화 상대방은 절대 들을 수 없으며, 이어폰 착용 시 더욱 선명하게 들립니다." android:textColor="#777788" android:textSize="12sp" android:lineSpacingMultiplier="1.7" android:layout_marginBottom="12dp"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="볼륨 0.3" android:textColor="#00C896" android:textSize="10sp" android:fontFamily="sans-serif-medium" android:background="@drawable/bg_id_tag" android:paddingStart="8dp" android:paddingEnd="8dp" android:paddingTop="3dp" android:paddingBottom="3dp" android:layout_marginEnd="6dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="상대방 비청취" android:textColor="#4ADE80" android:textSize="10sp" android:fontFamily="sans-serif-medium" android:background="@drawable/bg_id_tag" android:paddingStart="8dp" android:paddingEnd="8dp" android:paddingTop="3dp" android:paddingBottom="3dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/bg_detail_card" android:padding="18dp" android:layout_marginBottom="10dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="10dp">
+                        <FrameLayout android:layout_width="36dp" android:layout_height="36dp" android:background="@drawable/bg_url_icon" android:layout_marginEnd="12dp"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:text="🧬" android:textSize="16sp"/></FrameLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="EXAONE 3.5 LLM 서버" android:textColor="#E0E0F0" android:textSize="14sp" android:fontFamily="sans-serif-medium"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="FastAPI 백엔드에서 EXAONE 3.5 7.8B 모델(Ollama)이 상황을 분석합니다. 5가지 피싱 유형(검찰사칭·납치협박·대출사기 등)에 맞춤화된 대응 스크립트를 생성합니다." android:textColor="#777788" android:textSize="12sp" android:lineSpacingMultiplier="1.7" android:layout_marginBottom="12dp"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="EXAONE 3.5" android:textColor="#FAC775" android:textSize="10sp" android:fontFamily="sans-serif-medium" android:background="@drawable/bg_id_tag" android:paddingStart="8dp" android:paddingEnd="8dp" android:paddingTop="3dp" android:paddingBottom="3dp" android:layout_marginEnd="6dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="7.8B 파라미터" android:textColor="#FAC775" android:textSize="10sp" android:fontFamily="sans-serif-medium" android:background="@drawable/bg_id_tag" android:paddingStart="8dp" android:paddingEnd="8dp" android:paddingTop="3dp" android:paddingBottom="3dp" android:layout_marginEnd="6dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="FastAPI" android:textColor="#A78BFA" android:textSize="10sp" android:fontFamily="sans-serif-medium" android:background="@drawable/bg_id_tag" android:paddingStart="8dp" android:paddingEnd="8dp" android:paddingTop="3dp" android:paddingBottom="3dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 스크립트 예시 -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="대응 스크립트 예시" android:textColor="#555566" android:textSize="10sp" android:letterSpacing="0.2" android:layout_marginBottom="10dp" android:layout_marginStart="4dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/bg_detail_card" android:padding="18dp" android:layout_marginBottom="10dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/bg_spec_item" android:padding="14dp" android:layout_marginBottom="8dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="검찰사칭 탐지 시" android:textColor="#FF6B9D" android:textSize="10sp" android:fontFamily="sans-serif-medium" android:layout_marginBottom="6dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="검찰청은 전화로 계좌이체를 요구하지 않습니다. 전화를 끊고 182에 신고하세요." android:textColor="#C0C0D8" android:textSize="12sp" android:fontFamily="serif" android:lineSpacingMultiplier="1.5"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/bg_spec_item" android:padding="14dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="대출사기 탐지 시" android:textColor="#FAC775" android:textSize="10sp" android:fontFamily="sans-serif-medium" android:layout_marginBottom="6dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="선입금을 요구하는 대출은 100% 사기입니다. 절대 송금하지 마세요." android:textColor="#C0C0D8" android:textSize="12sp" android:fontFamily="serif" android:lineSpacingMultiplier="1.5"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 스펙 -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="핵심 스펙" android:textColor="#555566" android:textSize="10sp" android:letterSpacing="0.2" android:layout_marginBottom="10dp" android:layout_marginStart="4dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:background="@drawable/bg_spec_item" android:padding="14dp" android:layout_marginEnd="6dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.3" android:textColor="#00C896" android:textSize="18sp" android:fontFamily="sans-serif-medium"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TTS 볼륨 (속삭임)" android:textColor="#555566" android:textSize="10sp" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:background="@drawable/bg_spec_item" android:padding="14dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5가지" android:textColor="#00C896" android:textSize="18sp" android:fontFamily="sans-serif-medium"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="피싱 유형 대응" android:textColor="#555566" android:textSize="10sp" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="40dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:background="@drawable/bg_spec_item" android:padding="14dp" android:layout_marginEnd="6dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="7.8B" android:textColor="#FAC775" android:textSize="18sp" android:fontFamily="sans-serif-medium"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LLM 파라미터" android:textColor="#555566" android:textSize="10sp" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:background="@drawable/bg_spec_item" android:padding="14dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="실시간" android:textColor="#4ADE80" android:textSize="18sp" android:fontFamily="sans-serif-medium"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="스크립트 생성" android:textColor="#555566" android:textSize="10sp" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

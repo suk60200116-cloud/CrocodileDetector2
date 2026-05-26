@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_nav_home"
+        android:title="홈" />
+
+    <item
+        android:id="@+id/nav_url"
+        android:icon="@drawable/ic_nav_url"
+        android:title="URL 검사" />
+
+    <item
+        android:id="@+id/nav_guide"
+        android:icon="@drawable/ic_nav_guide"
+        android:title="수법 정리" />
+
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/ic_nav_settings"
+        android:title="설정" />
+
+</menu>

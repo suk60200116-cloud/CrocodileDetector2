@@ -1,0 +1,27 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+# Large model files
+app/src/main/assets/fasttext_lite_v2.bin
+app/src/main/assets/sherpa-onnx-moonshine-tiny-ko-quantized-2026-02-27/decoder_model_merged.ort
+app/src/main/assets/sherpa-onnx-moonshine-tiny-ko-quantized-2026-02-27/encoder_model.ort
+app/src/main/assets/silero_vad.onnx
+app/src/main/assets/model_scripted.ptl
+
+# Build outputs
+build/
+.gradle/
+*.iml
+.idea/

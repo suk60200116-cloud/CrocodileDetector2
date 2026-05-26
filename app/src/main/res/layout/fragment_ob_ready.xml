@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0A0A0F"
+    android:paddingHorizontal="28dp"
+    android:paddingTop="52dp"
+    android:paddingBottom="16dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <com.smishing.crocodiledetector.ScaleDomeView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="준비 완료"
+        android:textColor="#555555"
+        android:textSize="11sp"
+        android:letterSpacing="0.12"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이제 악어가\n지킵니다."
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:lineSpacingMultiplier="1.15"
+        android:letterSpacing="-0.03"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="통화가 시작되면 자동으로\n보이스피싱을 감지할게요"
+        android:textColor="#555555"
+        android:textSize="15sp"
+        android:lineSpacingExtra="6dp"
+        android:layout_marginBottom="28dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_ob_card"
+        android:padding="16dp">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="10dp">
+            <View android:layout_width="6dp" android:layout_height="6dp" android:background="@drawable/bg_dot_purple" android:layout_marginEnd="10dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="실시간 탐지 준비됨" android:textColor="#888888" android:textSize="13sp"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="10dp">
+            <View android:layout_width="6dp" android:layout_height="6dp" android:background="@drawable/bg_dot_purple" android:layout_marginEnd="10dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="온디바이스 AI 탑재" android:textColor="#888888" android:textSize="13sp"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+            <View android:layout_width="6dp" android:layout_height="6dp" android:background="@drawable/bg_dot_purple" android:layout_marginEnd="10dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="인터넷 없이도 동작" android:textColor="#888888" android:textSize="13sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

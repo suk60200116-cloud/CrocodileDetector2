@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- 문서 배경 -->
+    <path
+        android:fillColor="#A78BFA"
+        android:pathData="M4,3 C4,2.448 4.448,2 5,2 L16,2 L20,6 L20,21 C20,21.552 19.552,22 19,22 L5,22 C4.448,22 4,21.552 4,21 Z"/>
+
+    <!-- 문서 접힌 모서리 -->
+    <path
+        android:fillColor="#7C5CCC"
+        android:pathData="M16,2 L16,6 L20,6 Z"/>
+
+    <!-- 텍스트 줄 1 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.9"
+        android:pathData="M7,9 L14,9 C14.552,9 15,9.448 15,10 C15,10.552 14.552,11 14,11 L7,11 C6.448,11 6,10.552 6,10 C6,9.448 6.448,9 7,9 Z"/>
+
+    <!-- 텍스트 줄 2 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.9"
+        android:pathData="M7,12.5 L16,12.5 C16.552,12.5 17,12.948 17,13.5 C17,14.052 16.552,14.5 16,14.5 L7,14.5 C6.448,14.5 6,14.052 6,13.5 C6,12.948 6.448,12.5 7,12.5 Z"/>
+
+    <!-- 말풍선 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M13,16.5 C13,15.948 13.448,15.5 14,15.5 L19,15.5 C19.552,15.5 20,15.948 20,16.5 L20,19.5 C20,20.052 19.552,20.5 19,20.5 L15.5,20.5 L14,22 L14,20.5 C13.448,20.5 13,20.052 13,19.5 Z"/>
+
+    <!-- 말풍선 텍스트 줄 -->
+    <path
+        android:fillColor="#A78BFA"
+        android:pathData="M14.5,17.2 L18.5,17.2 C18.776,17.2 19,17.424 19,17.7 C19,17.976 18.776,18.2 18.5,18.2 L14.5,18.2 C14.224,18.2 14,17.976 14,17.7 C14,17.424 14.224,17.2 14.5,17.2 Z"/>
+
+    <path
+        android:fillColor="#A78BFA"
+        android:pathData="M14.5,18.8 L17.5,18.8 C17.776,18.8 18,19.024 18,19.3 C18,19.576 17.776,19.8 17.5,19.8 L14.5,19.8 C14.224,19.8 14,19.576 14,19.3 C14,19.024 14.224,18.8 14.5,18.8 Z"/>
+
+</vector>

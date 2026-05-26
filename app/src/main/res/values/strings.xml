@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CrocodileDetector</string>
+    <string name="accessibility_service_description">보이스피싱 탐지를 위해 통화 중 음성을 분석합니다</string>
+</resources>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A0F"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="52dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="기능 소개"
+            android:textColor="#555555"
+            android:textSize="11sp"
+            android:letterSpacing="0.12"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이렇게\n지켜드려요."
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:lineSpacingMultiplier="1.15"
+            android:letterSpacing="-0.03"
+            android:layout_marginBottom="28dp"/>
+
+        <!-- 실시간 통화 분석 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_ob_card"
+            android:padding="16dp"
+            android:layout_marginBottom="10dp">
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_ob_icon"
+                android:gravity="center">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📞" android:textSize="18sp"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="14dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="실시간 통화 분석" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="위험 키워드를 즉시 감지합니다" android:textColor="#666666" android:textSize="13sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- AI 대응 스크립트 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_ob_card"
+            android:padding="16dp"
+            android:layout_marginBottom="10dp">
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_ob_icon"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_script"
+                    android:contentDescription="AI 대응 스크립트"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="14dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AI 대응 스크립트" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="상황별 대응 방법을 실시간 제공합니다" android:textColor="#666666" android:textSize="13sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 스미싱 URL -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_ob_card"
+            android:padding="16dp"
+            android:layout_marginBottom="10dp">
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_ob_icon"
+                android:gravity="center">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🔗" android:textSize="18sp"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="14dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="스미싱 URL 검사" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="링크 안전 여부를 즉시 확인합니다" android:textColor="#666666" android:textSize="13sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- SIM Box -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_ob_card"
+            android:padding="16dp">
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_ob_icon"
+                android:gravity="center">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📡" android:textSize="18sp"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="14dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SIM Box 탐지" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="불법 중계기를 자동으로 감지합니다" android:textColor="#666666" android:textSize="13sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

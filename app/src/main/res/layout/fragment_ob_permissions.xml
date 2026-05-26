@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A0F"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="52dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="권한 안내"
+            android:textColor="#555555"
+            android:textSize="11sp"
+            android:letterSpacing="0.12"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="앱 사용을 위해\n권한이 필요해요."
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:lineSpacingMultiplier="1.15"
+            android:letterSpacing="-0.03"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="기능 작동에 꼭 필요한 권한만 요청해요"
+            android:textColor="#555555"
+            android:textSize="13sp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- 필수 라벨 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="필수"
+            android:textColor="#A78BFA"
+            android:textSize="11sp"
+            android:letterSpacing="0.08"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- 마이크 카드 -->
+        <LinearLayout
+            android:id="@+id/cardMic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_ob_card"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_ob_icon"
+                    android:gravity="center">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🎤" android:textSize="18sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="마이크" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="통화 음성을 분석해요" android:textColor="#666666" android:textSize="13sp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/btnExpandMic"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:text="∨"
+                    android:textColor="#555555"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"/>
+            </LinearLayout>
+
+            <!-- 마이크 펼침 내용 -->
+            <LinearLayout
+                android:id="@+id/expandMic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                android:paddingBottom="16dp"
+                android:visibility="gone">
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#1E1E1E" android:layout_marginBottom="12dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="통화 음성 실시간 분석"
+                    android:textColor="#A78BFA" android:textSize="12sp" android:textStyle="bold" android:layout_marginBottom="6dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="통화가 시작되면 AI가 목소리와 대화 문맥을 실시간으로 분석하여 보이스피싱 여부를 판단합니다."
+                    android:textColor="#888888" android:textSize="12sp" android:lineSpacingExtra="4dp" android:layout_marginBottom="8dp"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:background="#1A1A2E" android:padding="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="※ 음성은 기기 내부에서만 처리되며 절대 저장되거나 외부로 전송되지 않습니다."
+                        android:textColor="#A78BFA" android:textSize="11sp" android:lineSpacingExtra="3dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 전화 카드 -->
+        <LinearLayout
+            android:id="@+id/cardPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_ob_card"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <LinearLayout android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/bg_ob_icon" android:gravity="center">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📞" android:textSize="18sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="전화" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="통화 상태를 감지해요" android:textColor="#666666" android:textSize="13sp"/>
+                </LinearLayout>
+
+                <TextView android:id="@+id/btnExpandPhone" android:layout_width="28dp" android:layout_height="28dp" android:text="∨" android:textColor="#555555" android:textSize="16sp" android:gravity="center" android:clickable="true" android:focusable="true"/>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/expandPhone" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingHorizontal="16dp" android:paddingBottom="16dp" android:visibility="gone">
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#1E1E1E" android:layout_marginBottom="12dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="통화 상태 감지 및 위험 번호 식별" android:textColor="#A78BFA" android:textSize="12sp" android:textStyle="bold" android:layout_marginBottom="6dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="전화 수/발신 상태를 감지하여 분석을 시작하고, 통화 기록을 바탕으로 스팸 및 위험 번호 패턴을 파악하여 차단 기능을 제공합니다."
+                    android:textColor="#888888" android:textSize="12sp" android:lineSpacingExtra="4dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 연락처 카드 -->
+        <LinearLayout
+            android:id="@+id/cardContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_ob_card"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="16dp" android:gravity="center_vertical">
+                <LinearLayout android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/bg_ob_icon" android:gravity="center">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="👤" android:textSize="18sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="연락처" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="모르는 번호를 식별해요" android:textColor="#666666" android:textSize="13sp"/>
+                </LinearLayout>
+                <TextView android:id="@+id/btnExpandContact" android:layout_width="28dp" android:layout_height="28dp" android:text="∨" android:textColor="#555555" android:textSize="16sp" android:gravity="center" android:clickable="true" android:focusable="true"/>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/expandContact" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingHorizontal="16dp" android:paddingBottom="16dp" android:visibility="gone">
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#1E1E1E" android:layout_marginBottom="12dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="모르는 번호 식별 및 예외 처리" android:textColor="#A78BFA" android:textSize="12sp" android:textStyle="bold" android:layout_marginBottom="6dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="사용자의 주소록에 저장된 안전한 지인 번호와 저장되지 않은 외부 번호를 구분하여, 더욱 정밀하고 오탐지 없는 알림을 제공하기 위해 사용됩니다."
+                    android:textColor="#888888" android:textSize="12sp" android:lineSpacingExtra="4dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 선택 라벨 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="선택"
+            android:textColor="#444444"
+            android:textSize="11sp"
+            android:letterSpacing="0.08"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- 앱 알림 카드 -->
+        <LinearLayout
+            android:id="@+id/cardNotif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_ob_card"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="16dp" android:gravity="center_vertical">
+                <LinearLayout android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/bg_ob_icon_dim" android:gravity="center">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🔔" android:textSize="18sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="앱 알림" android:textColor="#666666" android:textSize="15sp" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="위험 감지 시 알림을 받아요" android:textColor="#444444" android:textSize="13sp"/>
+                </LinearLayout>
+                <TextView android:id="@+id/btnExpandNotif" android:layout_width="28dp" android:layout_height="28dp" android:text="∨" android:textColor="#444444" android:textSize="16sp" android:gravity="center" android:clickable="true" android:focusable="true"/>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/expandNotif" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingHorizontal="16dp" android:paddingBottom="16dp" android:visibility="gone">
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#1E1E1E" android:layout_marginBottom="12dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="위험 감지 시 즉각 경고" android:textColor="#A78BFA" android:textSize="12sp" android:textStyle="bold" android:layout_marginBottom="6dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="보이스피싱이나 스미싱 위험이 감지되는 즉시 팝업이나 푸시(PUSH) 알림을 통해 사용자에게 경고를 전달합니다."
+                    android:textColor="#888888" android:textSize="12sp" android:lineSpacingExtra="4dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 데이터 처리 방침 카드 -->
+        <LinearLayout
+            android:id="@+id/cardData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_ob_card"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <LinearLayout android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/bg_ob_icon" android:gravity="center">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🔒" android:textSize="18sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="처리하는 데이터 및 보호 방법" android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="데이터 보호 방침을 확인하세요" android:textColor="#555555" android:textSize="12sp"/>
+                </LinearLayout>
+
+                <TextView android:id="@+id/btnExpandData" android:layout_width="28dp" android:layout_height="28dp" android:text="∨" android:textColor="#555555" android:textSize="16sp" android:gravity="center" android:clickable="true" android:focusable="true"/>
+            </LinearLayout>
+
+            <!-- 데이터 방침 펼침 내용 -->
+            <LinearLayout android:id="@+id/expandData" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingHorizontal="16dp" android:paddingBottom="16dp" android:visibility="gone">
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#1E1E1E" android:layout_marginBottom="12dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="1. 처리하는 데이터"
+                    android:textColor="#A78BFA" android:textSize="12sp" android:textStyle="bold" android:layout_marginBottom="6dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="크로커다일팀은 사용자의 사생활을 최우선으로 존중하며, 데이터의 안전한 보호를 위해 최선을 다하고 있습니다. 서비스를 제공하기 위해 사용자의 통화 음성, 전화번호, 통화 및 문자 기록, 연락처 정보, 기기 정보(OS, 모델명 등)를 처리합니다. 이는 오직 실시간 보이스피싱 식별, 스미싱 탐지, 위험 상황 알림이라는 본연의 서비스 목적을 위해서만 사용됩니다."
+                    android:textColor="#888888" android:textSize="12sp" android:lineSpacingExtra="4dp" android:layout_marginBottom="16dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="2. 데이터를 처리하는 방법"
+                    android:textColor="#A78BFA" android:textSize="12sp" android:textStyle="bold" android:layout_marginBottom="6dp"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="#1A1A2E" android:padding="12dp" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="100% 온디바이스 처리"
+                        android:textColor="#A78BFA" android:textSize="11sp" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="가장 민감한 정보인 '통화 음성'은 오직 사용자의 스마트폰 기기 내부에서만 실시간으로 분석됩니다. 통화가 종료되면 분석 데이터는 즉시 파기되며, 어떠한 경우에도 외부 서버로 전송되거나 녹음/저장되지 않습니다."
+                        android:textColor="#888888" android:textSize="11sp" android:lineSpacingExtra="3dp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="#1A1A2E" android:padding="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="목적 외 사용 금지"
+                        android:textColor="#A78BFA" android:textSize="11sp" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="전화번호, 주소록, 문자 기록 등의 데이터는 위험 번호 식별을 위한 대조 목적으로만 일시적으로 접근하며, 개인을 특정할 수 있는 형태로 제3자에게 절대 제공하지 않습니다."
+                        android:textColor="#888888" android:textSize="11sp" android:lineSpacingExtra="3dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

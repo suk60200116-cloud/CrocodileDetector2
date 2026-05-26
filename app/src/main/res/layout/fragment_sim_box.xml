@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0A0A0F">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="56dp" android:orientation="horizontal" android:gravity="center_vertical" android:paddingStart="4dp" android:paddingEnd="20dp" android:paddingTop="4dp" android:background="#0D0D14">
+        <ImageButton android:id="@+id/btnBack" android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_arrow_left" android:background="?attr/selectableItemBackgroundBorderless" android:contentDescription="뒤로가기"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="SIM Box 탐지" android:textColor="#FFFFFF" android:textSize="17sp" android:fontFamily="sans-serif-medium"/>
+    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#1F1F2E"/>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+
+            <!-- Hero -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center" android:background="#1A0A14" android:padding="32dp">
+                <FrameLayout android:layout_width="80dp" android:layout_height="80dp" android:background="@drawable/bg_simbox_icon" android:layout_marginBottom="20dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:text="📡" android:textSize="36sp"/>
+                </FrameLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SIM BOX DETECTION" android:textColor="#FF6B9D" android:textSize="11sp" android:letterSpacing="0.15" android:fontFamily="sans-serif-medium" android:layout_marginBottom="10dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="불법 중계기를\n실시간으로 탐지합니다" android:textColor="#FFFFFF" android:textSize="22sp" android:fontFamily="sans-serif-medium" android:gravity="center" android:lineSpacingMultiplier="1.3" android:layout_marginBottom="10dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="국제전화를 국내전화처럼 위장하는\n불법 SIM Box 장비를 음성 신호 분석으로 탐지합니다." android:textColor="#888899" android:textSize="13sp" android:gravity="center" android:lineSpacingMultiplier="1.6"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+
+                <!-- SIM Box란? -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SIM Box란?" android:textColor="#555566" android:textSize="10sp" android:letterSpacing="0.2" android:layout_marginBottom="10dp" android:layout_marginStart="4dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/bg_detail_card" android:padding="18dp" android:layout_marginBottom="10dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="10dp">
+                        <FrameLayout android:layout_width="36dp" android:layout_height="36dp" android:background="@drawable/bg_simbox_icon" android:layout_marginEnd="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:text="⚠️" android:textSize="16sp"/>
+                        </FrameLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="불법 전화 중계 장비" android:textColor="#E0E0F0" android:textSize="14sp" android:fontFamily="sans-serif-medium"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="SIM Box는 해외에서 걸려오는 보이스피싱 전화를 마치 국내 전화인 것처럼 위장하는 불법 중계기입니다. 이 장비를 거치면 발신번호가 국내 번호로 조작되어 피해자가 의심하기 어렵습니다." android:textColor="#777788" android:textSize="12sp" android:lineSpacingMultiplier="1.7"/>
+                </LinearLayout>
+
+                <!-- 탐지 원리 -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="탐지 원리" android:textColor="#555566" android:textSize="10sp" android:letterSpacing="0.2" android:layout_marginBottom="10dp" android:layout_marginStart="4dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/bg_detail_card" android:padding="18dp" android:layout_marginBottom="10dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="14dp">
+                        <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="1" android:textColor="#FF6B9D" android:textSize="12sp" android:fontFamily="sans-serif-medium" android:gravity="center" android:background="@drawable/bg_simbox_icon" android:layout_marginEnd="12dp" android:layout_marginTop="1dp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="음성 품질 분석" android:textColor="#E0E0F0" android:textSize="13sp" android:fontFamily="sans-serif-medium" android:layout_marginBottom="4dp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SIM Box를 거친 통화는 코덱 변환 과정에서 특유의 음성 왜곡과 에코 패턴이 발생합니다." android:textColor="#777788" android:textSize="12sp" android:lineSpacingMultiplier="1.5"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="14dp">
+                        <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="2" android:textColor="#FF6B9D" android:textSize="12sp" android:fontFamily="sans-serif-medium" android:gravity="center" android:background="@drawable/bg_simbox_icon" android:layout_marginEnd="12dp" android:layout_marginTop="1dp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3초 구간 단위 분석" android:textColor="#E0E0F0" android:textSize="13sp" android:fontFamily="sans-serif-medium" android:layout_marginBottom="4dp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="발화 구간을 감지한 후 3초 단위로 음성 신호를 분석하여 이상 패턴 여부를 판별합니다." android:textColor="#777788" android:textSize="12sp" android:lineSpacingMultiplier="1.5"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="3" android:textColor="#FF6B9D" android:textSize="12sp" android:fontFamily="sans-serif-medium" android:gravity="center" android:background="@drawable/bg_simbox_icon" android:layout_marginEnd="12dp" android:layout_marginTop="1dp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="즉시 경고 + 음성 안내" android:textColor="#E0E0F0" android:textSize="13sp" android:fontFamily="sans-serif-medium" android:layout_marginBottom="4dp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="탐지 즉시 오버레이 경고 화면을 활성화하고 '불법 중계기가 의심됩니다'를 TTS로 안내합니다." android:textColor="#777788" android:textSize="12sp" android:lineSpacingMultiplier="1.5"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 스펙 -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="탐지 스펙" android:textColor="#555566" android:textSize="10sp" android:letterSpacing="0.2" android:layout_marginBottom="10dp" android:layout_marginStart="4dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:background="@drawable/bg_spec_item" android:padding="14dp" android:layout_marginEnd="6dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3초" android:textColor="#FF6B9D" android:textSize="18sp" android:fontFamily="sans-serif-medium"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="분석 구간" android:textColor="#555566" android:textSize="10sp" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:background="@drawable/bg_spec_item" android:padding="14dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="실시간" android:textColor="#FF6B9D" android:textSize="18sp" android:fontFamily="sans-serif-medium"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="탐지 방식" android:textColor="#555566" android:textSize="10sp" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="40dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:background="@drawable/bg_spec_item" android:padding="14dp" android:layout_marginEnd="6dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="즉시" android:textColor="#4ADE80" android:textSize="18sp" android:fontFamily="sans-serif-medium"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="경고 발동 시간" android:textColor="#555566" android:textSize="10sp" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:background="@drawable/bg_spec_item" android:padding="14dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0원" android:textColor="#4ADE80" android:textSize="18sp" android:fontFamily="sans-serif-medium"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="추가 비용" android:textColor="#555566" android:textSize="10sp" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

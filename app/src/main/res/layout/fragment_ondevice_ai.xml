@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0A0A0F">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="4dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="4dp"
+        android:background="#0D0D14">
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_arrow_left"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="뒤로가기"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="온디바이스 AI"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            android:fontFamily="sans-serif-medium"/>
+    </LinearLayout>
+
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#1F1F2E"/>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Hero -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#0E0A1A"
+                android:padding="32dp">
+                <FrameLayout
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/bg_ondevice_icon"
+                    android:layout_marginBottom="20dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="🧠"
+                        android:textSize="36sp"/>
+                </FrameLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ON-DEVICE AI"
+                    android:textColor="#A78BFA"
+                    android:textSize="11sp"
+                    android:letterSpacing="0.15"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginBottom="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="통화 내용은\n폰 밖으로 나가지 않습니다"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:lineSpacingMultiplier="1.3"
+                    android:layout_marginBottom="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="모든 음성 처리는 기기 안에서만 이루어집니다.\n서버에는 분석된 텍스트만 전달됩니다."
+                    android:textColor="#888899"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:lineSpacingMultiplier="1.6"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- 처리 흐름 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="처리 흐름"
+                    android:textColor="#555566"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.2"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="4dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_flow_container"
+                    android:padding="16dp"
+                    android:layout_marginBottom="10dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                        <FrameLayout android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/bg_ondevice_icon" android:layout_gravity="center" android:layout_marginBottom="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:text="🎙️" android:textSize="18sp"/>
+                        </FrameLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="음성\n입력" android:textColor="#777788" android:textSize="10sp" android:gravity="center" android:lineSpacingMultiplier="1.3"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="→" android:textColor="#333344" android:textSize="16sp" android:layout_marginBottom="14dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                        <FrameLayout android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/bg_aicroc_icon" android:layout_gravity="center" android:layout_marginBottom="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:text="🧠" android:textSize="18sp"/>
+                        </FrameLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="온디바이스\nSTT" android:textColor="#777788" android:textSize="10sp" android:gravity="center" android:lineSpacingMultiplier="1.3"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="→" android:textColor="#333344" android:textSize="16sp" android:layout_marginBottom="14dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                        <FrameLayout android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/bg_simbox_icon" android:layout_gravity="center" android:layout_marginBottom="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:text="🔍" android:textSize="18sp"/>
+                        </FrameLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="키워드\n분석" android:textColor="#777788" android:textSize="10sp" android:gravity="center" android:lineSpacingMultiplier="1.3"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="→" android:textColor="#333344" android:textSize="16sp" android:layout_marginBottom="14dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                        <FrameLayout android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/bg_url_icon" android:layout_gravity="center" android:layout_marginBottom="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:text="☁️" android:textSize="18sp"/>
+                        </FrameLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="텍스트만\n서버전송" android:textColor="#777788" android:textSize="10sp" android:gravity="center" android:lineSpacingMultiplier="1.3"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Moonshine STT 카드 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_detail_card"
+                    android:padding="18dp"
+                    android:layout_marginBottom="10dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="10dp">
+                        <FrameLayout android:layout_width="36dp" android:layout_height="36dp" android:background="@drawable/bg_ondevice_icon" android:layout_marginEnd="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:text="🎙️" android:textSize="16sp"/>
+                        </FrameLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Moonshine STT 엔진" android:textColor="#E0E0F0" android:textSize="14sp" android:fontFamily="sans-serif-medium"/>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="한국어 특화 경량 음성인식 모델 sherpa-onnx moonshine-tiny-ko를 탑재했습니다. 인터넷 없이도 실시간으로 상대방 발화를 텍스트로 변환하며, 16kHz 샘플링으로 통화 품질을 최적으로 처리합니다."
+                        android:textColor="#777788"
+                        android:textSize="12sp"
+                        android:lineSpacingMultiplier="1.7"
+                        android:layout_marginBottom="12dp"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="한국어 특화" android:textColor="#A78BFA" android:textSize="10sp" android:fontFamily="sans-serif-medium" android:background="@drawable/bg_id_tag" android:paddingStart="8dp" android:paddingEnd="8dp" android:paddingTop="3dp" android:paddingBottom="3dp" android:layout_marginEnd="6dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="오프라인 동작" android:textColor="#4ADE80" android:textSize="10sp" android:fontFamily="sans-serif-medium" android:background="@drawable/bg_id_tag" android:paddingStart="8dp" android:paddingEnd="8dp" android:paddingTop="3dp" android:paddingBottom="3dp" android:layout_marginEnd="6dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="실시간" android:textColor="#00C896" android:textSize="10sp" android:fontFamily="sans-serif-medium" android:background="@drawable/bg_id_tag" android:paddingStart="8dp" android:paddingEnd="8dp" android:paddingTop="3dp" android:paddingBottom="3dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 키워드 탐지 카드 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_detail_card"
+                    android:padding="18dp"
+                    android:layout_marginBottom="20dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="10dp">
+                        <FrameLayout android:layout_width="36dp" android:layout_height="36dp" android:background="@drawable/bg_simbox_icon" android:layout_marginEnd="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:text="🔍" android:textSize="16sp"/>
+                        </FrameLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="키워드 탐지 엔진" android:textColor="#E0E0F0" android:textSize="14sp" android:fontFamily="sans-serif-medium"/>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="금융감독원 그놈목소리 데이터셋 기반 키워드 크로커다일팀이 개발한 맥락탐지를 통해 피싱 발화 패턴을 실시간 탐지합니다."
+                        android:textColor="#777788"
+                        android:textSize="12sp"
+                        android:lineSpacingMultiplier="1.7"
+                        android:layout_marginBottom="12dp"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="고위험 키워드 DB 구축" android:textColor="#FF6B9D" android:textSize="10sp" android:fontFamily="sans-serif-medium" android:background="@drawable/bg_id_tag" android:paddingStart="8dp" android:paddingEnd="8dp" android:paddingTop="3dp" android:paddingBottom="3dp" android:layout_marginEnd="6dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="15가지 피싱 유형" android:textColor="#FAC775" android:textSize="10sp" android:fontFamily="sans-serif-medium" android:background="@drawable/bg_id_tag" android:paddingStart="8dp" android:paddingEnd="8dp" android:paddingTop="3dp" android:paddingBottom="3dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 핵심 스펙 -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="핵심 스펙" android:textColor="#555566" android:textSize="10sp" android:letterSpacing="0.2" android:layout_marginBottom="10dp" android:layout_marginStart="4dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:background="@drawable/bg_spec_item" android:padding="14dp" android:layout_marginEnd="6dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="DB구축" android:textColor="#A78BFA" android:textSize="18sp" android:fontFamily="sans-serif-medium"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="탐지 키워드" android:textColor="#555566" android:textSize="10sp" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:background="@drawable/bg_spec_item" android:padding="14dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="16kHz" android:textColor="#A78BFA" android:textSize="18sp" android:fontFamily="sans-serif-medium"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="음성 샘플링" android:textColor="#555566" android:textSize="10sp" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="20dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:background="@drawable/bg_spec_item" android:padding="14dp" android:layout_marginEnd="6dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0 MB" android:textColor="#4ADE80" android:textSize="18sp" android:fontFamily="sans-serif-medium"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="외부 음성 전송량" android:textColor="#555566" android:textSize="10sp" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:background="@drawable/bg_spec_item" android:padding="14dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="15가지" android:textColor="#A78BFA" android:textSize="18sp" android:fontFamily="sans-serif-medium"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="대표적인 피싱 유형 분류" android:textColor="#555566" android:textSize="10sp" android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 프라이버시 -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="프라이버시 보호" android:textColor="#555566" android:textSize="10sp" android:letterSpacing="0.2" android:layout_marginBottom="10dp" android:layout_marginStart="4dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#0A180A"
+                    android:padding="18dp"
+                    android:layout_marginBottom="40dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓" android:textColor="#4ADE80" android:textSize="14sp" android:layout_marginEnd="10dp" android:layout_marginTop="1dp"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="음성 원본은 기기 밖으로 절대 전송되지 않습니다" android:textColor="#A0C8A0" android:textSize="12sp" android:lineSpacingMultiplier="1.5"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓" android:textColor="#4ADE80" android:textSize="14sp" android:layout_marginEnd="10dp" android:layout_marginTop="1dp"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="STT 변환된 텍스트만 분석 서버로 전달됩니다" android:textColor="#A0C8A0" android:textSize="12sp" android:lineSpacingMultiplier="1.5"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓" android:textColor="#4ADE80" android:textSize="14sp" android:layout_marginEnd="10dp" android:layout_marginTop="1dp"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="통화 종료 즉시 모든 음성 데이터가 삭제됩니다" android:textColor="#A0C8A0" android:textSize="12sp" android:lineSpacingMultiplier="1.5"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓" android:textColor="#4ADE80" android:textSize="14sp" android:layout_marginEnd="10dp" android:layout_marginTop="1dp"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="인터넷 없이도 탐지 기능이 정상 동작합니다" android:textColor="#A0C8A0" android:textSize="12sp" android:lineSpacingMultiplier="1.5"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
