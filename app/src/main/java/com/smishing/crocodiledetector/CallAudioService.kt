@@ -71,6 +71,7 @@ class CallAudioService : AccessibilityService() {
 
     private var tts: TextToSpeech? = null
 
+    private var detectedPhishingType: String = ""
     @Volatile
     private var isCapturing = false
 
@@ -633,7 +634,9 @@ class CallAudioService : AccessibilityService() {
                                 val newText = newTextBuffer.toString().trim()
                                 newTextBuffer.clear()
 
-                                sendTextToServer(newText, lastAnalysisResult, emptyList())
+                                if (cumulativeScore >= 30.0) {
+                                    sendTextToServer(newText, lastAnalysisResult, emptyList(), detectedPhishingType)
+                                }
                             }
                         }
                     }
@@ -658,6 +661,7 @@ class CallAudioService : AccessibilityService() {
                 val result = lstmDetector.predict(contextText)
 
                 if (result.confidence > 0.6) {
+                    detectedPhishingType = result.type
                     val addScore = result.confidence * 20.0
                     cumulativeScore += addScore
                     Log.w(TAG, "🚨 [LSTM 탐지] 피싱 의심! 유형: ${result.type}, 확률: ${result.confidence}, 누적점수: $cumulativeScore")
@@ -794,7 +798,7 @@ class CallAudioService : AccessibilityService() {
         tts?.speak(message, TextToSpeech.QUEUE_FLUSH, params, "guide")
     }
 
-    private fun sendTextToServer(text: String, previousResult: String = "", detectedKeywords: List<String> = emptyList()) {
+    private fun sendTextToServer(text: String, previousResult: String = "", detectedKeywords: List<String> = emptyList(), phishingType: String = "") {
         serviceScope.launch(Dispatchers.IO) {
             try {
                 val url = java.net.URL("https://exemptible-solidary-bryce.ngrok-free.dev/analyze-text")
@@ -807,6 +811,7 @@ class CallAudioService : AccessibilityService() {
                     put("text", text)
                     put("previous_result", previousResult)
                     put("detected_keywords", org.json.JSONArray(detectedKeywords))
+                    put("phishing_type", phishingType)
                 }.toString()
                 conn.outputStream.write(body.toByteArray())
                 val result = org.json.JSONObject(conn.inputStream.bufferedReader().readText()).getString("result")
